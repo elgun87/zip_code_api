@@ -1,0 +1,304 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-21T07:34:37.421Z",
+        "line": 3,
+        "name": "Negative scenario",
+        "description": "",
+        "id": "negative;negative-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 459000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Accept type is JSON",
+            "match": {
+              "location": "com.zipcode.step_definitions.Steps.acceptTypeIsJSON()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 131000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "path zipcode is 50000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50000",
+                  "offset": 16
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.path_zipcode_is(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 998000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I send a GET request to \"post code\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post code\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.i_send_a_get_request_to(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code must be 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.status_code_must_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "content type must be \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.content_type_must_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Negative",
+    "description": "",
+    "id": "negative",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/resources/negative_scenario.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-21T07:34:39.073Z",
+        "line": 2,
+        "name": "get any state",
+        "description": "",
+        "id": "zipcode;get-any-state",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Accept type is JSON",
+            "match": {
+              "location": "com.zipcode.step_definitions.Steps.acceptTypeIsJSON()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "path zipcode is 22031",
+            "match": {
+              "arguments": [
+                {
+                  "val": "22031",
+                  "offset": 16
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.path_zipcode_is(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I send a GET request to \"post code\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post code\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.i_send_a_get_request_to(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "status code must be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.status_code_must_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "content type must be \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.content_type_must_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"Server\" header is \"cloudflare\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Server\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"cloudflare\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.server_header_is_cloudflare(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"Report-To\" header exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Report-To\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.zipcode.step_definitions.Steps.report_to_header_exists(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 457000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "body should contains following information",
+            "match": {
+              "location": "com.zipcode.step_definitions.Steps.body_should_contains_following_information(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "post code",
+                  "22031"
+                ]
+              },
+              {
+                "cells": [
+                  "country",
+                  "United States"
+                ]
+              },
+              {
+                "cells": [
+                  "country abbreviation",
+                  "US"
+                ]
+              },
+              {
+                "cells": [
+                  "place name",
+                  "Fairfax"
+                ]
+              },
+              {
+                "cells": [
+                  "state",
+                  "Virginia"
+                ]
+              },
+              {
+                "cells": [
+                  "latitude",
+                  "38.8604"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Zipcode",
+    "description": "",
+    "id": "zipcode",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/resources/zipcode.feature",
+    "tags": []
+  }
+]
